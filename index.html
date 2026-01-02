@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PatternFly Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="logo">PATTERNFLY</div>
+    <div class="top-right">Ned Username</div>
+  </div>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <a class="active">System panel</a>
+      <a>Policy</a>
+      <a>Authentication</a>
+      <a>Network services</a>
+      <a>Server</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+      <h1>Dashboard</h1>
+
+      <div class="grid">
+
+        <!-- DETAILS -->
+        <div class="card">
+          <h3>Details</h3>
+          <p><b>Cluster API address</b><br>vijay.com</p>
+          <p><b>Cluster ID</b><br>23235f-sdff5e3rr-sdfef5</p>
+          <p><b>Provider</b><br>abc</p>
+          <p><b>OpenShift version</b><br>453574-45656-528</p>
+          <p><b>Update channel</b><br>sdfdsfhdhdh4.5</p>
+          <a class="link">View settings</a>
+        </div>
+
+        <!-- STATUS -->
+        <div class="card wide">
+          <h3>Status</h3>
+          <div class="status">
+            <span class="ok">✔ dsfd</span>
+            <span class="ok">✔ sahd</span>
+            <span class="bad">● qsadbsdlanba</span>
+            <span class="ok">✔ dbjcldc</span>
+            <span class="ok">✔ sdlkjsa</span>
+            <span class="ok">✔ sJBASLSIK</span>
+            <span class="ok">✔ SJLAJKS</span>
+          </div>
+        </div>
+
+        <!-- EVENTS (Top-right box) -->
+        <article class="card events-card">
+          <header class="card-header">
+            <h3>Events</h3>
+
+            <!-- Right-aligned filter control -->
+            <div class="events-filter">
+              <button class="seg active" aria-haspopup="listbox" aria-expanded="false">
+                All events ▾
+              </button>
+              <!-- Optional dropdown (static for now)
+              <ul class="events-menu" role="listbox">
+                <li role="option" aria-selected="true">All events</li>
+                <li role="option">Warnings</li>
+                <li role="option">Success</li>
+                <li role="option">Paused</li>
+              </ul>
+              -->
+            </div>
+          </header>
+
+          <div class="card-body">
+            <ul class="events-list">
+              <li class="event-row">
+                <span class="event-time">12:34</span>
+                <span class="event-icon dot blue" aria-hidden="true"></span>
+                <span class="event-title">Pause</span>
+              </li>
+
+              <li class="event-row">
+                <span class="event-time">12:32</span>
+                <span class="event-icon dot yellow" aria-hidden="true"></span>
+                <span class="event-title">⚠ 0/7 nodes are available</span>
+              </li>
+
+              <li class="event-row">
+                <span class="event-time">12:31</span>
+                <span class="event-icon dot yellow" aria-hidden="true"></span>
+                <span class="event-title">⚠ 0/7 nodes are available</span>
+              </li>
+
+              <!-- Success rows -->
+              <li class="event-row">
+                <span class="event-time">12:30</span>
+                <span class="event-icon dot green" aria-hidden="true"></span>
+                <span class="event-title">✔ Successfully assigned</span>
+              </li>
+              <li class="event-row">
+                <span class="event-time">12:28</span>
+                <span class="event-icon dot green" aria-hidden="true"></span>
+                <span class="event-title">✔ Successfully assigned</span>
+              </li>
+              <li class="event-row">
+                <span class="event-time">12:27</span>
+                <span class="event-icon dot green" aria-hidden="true"></span>
+                <span class="event-title">✔ Successfully assigned</span>
+              </li>
+              <li class="event-row">
+                <span class="event-time">12:26</span>
+                <span class="event-icon dot green" aria-hidden="true"></span>
+                <span class="event-title">✔ Successfully assigned</span>
+              </li>
+              <li class="event-row">
+                <span class="event-time">12:25</span>
+                <span class="event-icon dot green" aria-hidden="true"></span>
+                <span class="event-title">✔ Successfully assigned</span>
+              </li>
+              <li class="event-row">
+                <span class="event-time">12:24</span>
+                <span class="event-icon dot green" aria-hidden="true"></span>
+                <span class="event-title">✔ Successfully assigned</span>
+              </li>
+              <li class="event-row">
+                <span class="event-time">12:23</span>
+                <span class="event-icon dot green" aria-hidden="true"></span>
+                <span class="event-title">✔ Successfully assigned</span>
+              </li>
+              <li class="event-row">
+                <span class="event-time">12:22</span>
+                <span class="event-icon dot green" aria-hidden="true"></span>
+                <span class="event-title">✔ Successfully assigned</span>
+              </li>
+            </ul>
+          </div>
+
+          <footer class="card-footer">
+            <a class="link">View all events</a>
+          </footer>
+        </article>
+
+        <!-- CLUSTER INVENTORY -->
+        <div class="card">
+          <h3>Cluster Inventory</h3>
+          <ul class="inventory">
+            <li>3 hi</li>
+            <li>3 am</li>
+            <li>vijay</li>
+            <li>smash</li>
+            <li>4 Storage classes</li>
+            <li>16 PVCs</li>
+            <li>24</li>
+          </ul>
+        </div>
+
+        <!-- CLUSTER UTILIZATION -->
+        <div class="card wide">
+          <h3>Cluster utilization</h3>
+          <p><b>CPU:</b> 1rp</p>
+          <p><b>Memory:</b> 14GhdgckaB</p>
+          <p><b>Filesystem:</b> egfa TiB</p>
+          <p><b>Network transfer:</b> 4.9 Mbps in / SIUJBASIJK</p>
+          <p><b>Pod count:</b> 4636643</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+``
