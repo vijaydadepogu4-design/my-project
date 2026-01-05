@@ -1,180 +1,860 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>PatternFly Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cluster Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="logo">PATTERNFLY</div>
-    <div class="top-right">Ned Username</div>
-  </div>
+    <!-- Main Wrapper -->
+    <div class="dashboard-container">
 
-  <div class="layout">
-
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-      <a class="active">System panel</a>
-      <a>Policy</a>
-      <a>Authentication</a>
-      <a>Network services</a>
-      <a>Server</a>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div class="content">
-      <h1>Dashboard</h1>
-
-      <div class="grid">
-
-        <!-- DETAILS -->
-        <div class="card">
-          <h3>Details</h3>
-          <p><b>Cluster API address</b><br>vijay.com</p>
-          <p><b>Cluster ID</b><br>23235f-sdff5e3rr-sdfef5</p>
-          <p><b>Provider</b><br>abc</p>
-          <p><b>OpenShift version</b><br>453574-45656-528</p>
-          <p><b>Update channel</b><br>sdfdsfhdhdh4.5</p>
-          <a class="link">View settings</a>
-        </div>
-
-        <!-- STATUS -->
-        <div class="card wide">
-          <h3>Status</h3>
-          <div class="status">
-            <span class="ok">✔ dsfd</span>
-            <span class="ok">✔ sahd</span>
-            <span class="bad">● qsadbsdlanba</span>
-            <span class="ok">✔ dbjcldc</span>
-            <span class="ok">✔ sdlkjsa</span>
-            <span class="ok">✔ sJBASLSIK</span>
-            <span class="ok">✔ SJLAJKS</span>
-          </div>
-        </div>
-
-        <!-- EVENTS (Top-right box) -->
-        <article class="card events-card">
-          <header class="card-header">
-            <h3>Events</h3>
-
-            <!-- Right-aligned filter control -->
-            <div class="events-filter">
-              <button class="seg active" aria-haspopup="listbox" aria-expanded="false">
-                All events ▾
-              </button>
-              <!-- Optional dropdown (static for now)
-              <ul class="events-menu" role="listbox">
-                <li role="option" aria-selected="true">All events</li>
-                <li role="option">Warnings</li>
-                <li role="option">Success</li>
-                <li role="option">Paused</li>
-              </ul>
-              -->
+        <!-- LEFT SIDE: Navigation/System Panel -->
+        <aside class="sidebar-left">
+            <div class="logo-area">
+                <div class="logo-icon"></div>
+                <h2>Dashboard</h2>
             </div>
-          </header>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">System panel</a>
+                <a href="#" class="nav-item">Policy</a>
+                <a href="#" class="nav-item">Authentication</a>
+                <a href="#" class="nav-item">Network services</a>
+                <a href="#" class="nav-item">Server</a>
+            </nav>
+        </aside>
 
-          <div class="card-body">
-            <ul class="events-list">
-              <li class="event-row">
-                <span class="event-time">12:34</span>
-                <span class="event-icon dot blue" aria-hidden="true"></span>
-                <span class="event-title">Pause</span>
-              </li>
+        <!-- MIDDLE PART: Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Dashboard</h1>
+                <div class="user-profile">
+                    <span>Admin</span>
+                    <div class="avatar"></div>
+                </div>
+            </header>
 
-              <li class="event-row">
-                <span class="event-time">12:32</span>
-                <span class="event-icon dot yellow" aria-hidden="true"></span>
-                <span class="event-title">⚠ 0/7 nodes are available</span>
-              </li>
+            <!-- 4 Grid Parts -->
+            <div class="content-grid">
 
-              <li class="event-row">
-                <span class="event-time">12:31</span>
-                <span class="event-icon dot yellow" aria-hidden="true"></span>
-                <span class="event-title">⚠ 0/7 nodes are available</span>
-              </li>
+                <!-- 1. Details -->
+                <div class="card details-card">
+                    <div class="card-header">
+                        <h3>Details</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="detail-row">
+                            <span class="label">Cluster API address</span>
+                            <span class="value">https://api.devcluster.openshift.com:6443</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Cluster ID</span>
+                            <span class="value">63b97ac1-b850-4ld9-8220-239becde9e86</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Provider</span>
+                            <span class="value">AWS</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">OpenShift version</span>
+                            <span class="value">4.5.0-0.ci-2020-06-16-015028</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Update channel</span>
+                            <span class="value">stable-4.5</span>
+                        </div>
+                        <a href="#" class="link-action">View settings</a>
+                    </div>
+                </div>
 
-              <!-- Success rows -->
-              <li class="event-row">
-                <span class="event-time">12:30</span>
-                <span class="event-icon dot green" aria-hidden="true"></span>
-                <span class="event-title">✔ Successfully assigned</span>
-              </li>
-              <li class="event-row">
-                <span class="event-time">12:28</span>
-                <span class="event-icon dot green" aria-hidden="true"></span>
-                <span class="event-title">✔ Successfully assigned</span>
-              </li>
-              <li class="event-row">
-                <span class="event-time">12:27</span>
-                <span class="event-icon dot green" aria-hidden="true"></span>
-                <span class="event-title">✔ Successfully assigned</span>
-              </li>
-              <li class="event-row">
-                <span class="event-time">12:26</span>
-                <span class="event-icon dot green" aria-hidden="true"></span>
-                <span class="event-title">✔ Successfully assigned</span>
-              </li>
-              <li class="event-row">
-                <span class="event-time">12:25</span>
-                <span class="event-icon dot green" aria-hidden="true"></span>
-                <span class="event-title">✔ Successfully assigned</span>
-              </li>
-              <li class="event-row">
-                <span class="event-time">12:24</span>
-                <span class="event-icon dot green" aria-hidden="true"></span>
-                <span class="event-title">✔ Successfully assigned</span>
-              </li>
-              <li class="event-row">
-                <span class="event-time">12:23</span>
-                <span class="event-icon dot green" aria-hidden="true"></span>
-                <span class="event-title">✔ Successfully assigned</span>
-              </li>
-              <li class="event-row">
-                <span class="event-time">12:22</span>
-                <span class="event-icon dot green" aria-hidden="true"></span>
-                <span class="event-title">✔ Successfully assigned</span>
-              </li>
-            </ul>
-          </div>
+                <!-- 2. Status -->
+                <div class="card status-card">
+                    <div class="card-header">
+                        <h3>Status</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="status-grid">
+                            <div class="status-item success">
+                                <div class="status-icon-circle">✓</div> Cluster
+                            </div>
+                            <div class="status-item success">
+                                <div class="status-icon-circle">✓</div> Control plane
+                            </div>
+                            <div class="status-item warning">
+                                <div class="status-icon-circle warning">!</div> Operators
+                                <span class="sub-text">1 degraded</span>
+                            </div>
+                            <div class="status-item success">
+                                <div class="status-icon-circle">✓</div> Image vulnerabilities
+                            </div>
+                            <div class="status-item success">
+                                <div class="status-icon-circle">✓</div> Storage
+                            </div>
+                            <div class="status-item success">
+                                <div class="status-icon-circle">✓</div> Hardware
+                            </div>
+                            <div class="status-item success">
+                                <div class="status-icon-circle">✓</div> Insights
+                            </div>
+                        </div>
+                        <div class="notifications-section">
+                            <span class="notif-label">Notifications</span>
+                            <div class="notif-badges">
+                                <span class="badge red">2</span>
+                                <span class="badge yellow">3</span>
+                                <span class="badge blue">3</span>
+                            </div>
+                            <a href="#" class="view-all-notif">View all</a>
+                        </div>
+                    </div>
+                </div>
 
-          <footer class="card-footer">
-            <a class="link">View all events</a>
-          </footer>
-        </article>
+                <!-- 3. Cluster Inventory -->
+                <div class="card inventory-card">
+                    <div class="card-header">
+                        <h3>Cluster inventory</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="inventory-list">
+                            <div class="inventory-item"><span>3 Projects</span></div>
+                            <div class="inventory-item"><span>3 Nodes</span></div>
+                            <div class="inventory-item"><span>132 Pods</span>
+                                <div class="badges-row"><span class="warning-badge">19 ⚠</span> <span
+                                        class="error-badge">1 ⚠</span></div>
+                            </div>
+                            <div class="inventory-item"><span>8 VMs</span></div>
+                            <div class="inventory-item"><span>4 Storage classes</span></div>
+                            <div class="inventory-item"><span>16 PVCs</span></div>
+                            <div class="inventory-item"><span>24 Disks</span></div>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- CLUSTER INVENTORY -->
-        <div class="card">
-          <h3>Cluster Inventory</h3>
-          <ul class="inventory">
-            <li>3 hi</li>
-            <li>3 am</li>
-            <li>vijay</li>
-            <li>smash</li>
-            <li>4 Storage classes</li>
-            <li>16 PVCs</li>
-            <li>24</li>
-          </ul>
-        </div>
+                <!-- 4. Cluster Utilization -->
+                <div class="card utilization-card">
+                    <div class="card-header">
+                        <h3>Cluster utilization</h3>
+                        <span class="time-filter">24 hours ▼</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="util-row">
+                            <div class="util-text-side">
+                                <h4>CPU</h4>
+                                <div class="util-stats">
+                                    <span class="util-value">8.32 cores</span>
+                                    <span class="util-avail">8.27 cores available</span>
+                                </div>
+                            </div>
+                            <div class="util-viz-side">
+                                <span class="util-total">15.2 total limit</span>
+                            </div>
+                        </div>
+                        <div class="util-row">
+                            <div class="util-text-side">
+                                <h4>Memory</h4>
+                                <div class="util-stats">
+                                    <span class="util-value">142.37 GiB</span>
+                                    <span class="util-avail">113.63 GiB available</span>
+                                </div>
+                            </div>
+                            <div class="util-viz-side">
+                                <span class="util-total">234.2 total limit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- CLUSTER UTILIZATION -->
-        <div class="card wide">
-          <h3>Cluster utilization</h3>
-          <p><b>CPU:</b> 1rp</p>
-          <p><b>Memory:</b> 14GhdgckaB</p>
-          <p><b>Filesystem:</b> egfa TiB</p>
-          <p><b>Network transfer:</b> 4.9 Mbps in / SIUJBASIJK</p>
-          <p><b>Pod count:</b> 4636643</p>
-        </div>
+            </div>
+        </main>
 
-      </div>
+        <!-- RIGHT PART: Events -->
+        <aside class="sidebar-right">
+            <div class="panel-header">
+                <h3>Events</h3>
+                <span class="filter-link">All events ▼</span>
+            </div>
+            <div class="events-list">
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge warning-icon">!</span>
+                    <span class="text">0/7 nodes are available...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge warning-icon">!</span>
+                    <span class="text">0/7 nodes are available...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge info-icon">M</span>
+                    <span class="text">0/7 nodes are available...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge info-icon">P</span>
+                    <span class="text">0/7 nodes are available...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge info-icon">P</span>
+                    <span class="text">Successfully assigned...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge info-icon">P</span>
+                    <span class="text">Successfully assigned...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge info-icon">P</span>
+                    <span class="text">Successfully assigned...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge info-icon">P</span>
+                    <span class="text">Successfully assigned...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge info-icon">P</span>
+                    <span class="text">Successfully assigned...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge info-icon">P</span>
+                    <span class="text">Successfully assigned...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge info-icon">P</span>
+                    <span class="text">Successfully assigned...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge info-icon">P</span>
+                    <span class="text">Successfully assigned...</span>
+                </div>
+                <div class="event-item">
+                    <span class="arrow-icon">›</span>
+                    <span class="time">12:32</span>
+                    <span class="badge info-icon">P</span>
+                    <span class="text">Successfully assigned...</span>
+                </div>
+            </div>
+            <a href="#" class="view-all">View all events</a>
+        </aside>
+
     </div>
-  </div>
 
 </body>
+
 </html>
-``
+    --accent-danger: #c9190b;
+    --border-color: #2f2f2f;
+    --sidebar-width: 250px;
+    --right-panel-width: 300px;
+}
+
+body {
+    background-color: var(--bg-darker);
+    color: var(--text-primary);
+    height: 100vh;
+    overflow: hidden;
+    /* Prevent full page scroll, let containers scroll */
+}
+
+/* Main Layout Container */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* =========================================
+   LEFT SIDE: Navigation
+   ========================================= */
+.sidebar-left {
+    width: var(--sidebar-width);
+    background-color: var(--bg-dark);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logo-area {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #000;
+}
+
+.logo-icon {
+    width: 24px;
+    height: 24px;
+    background-color: var(--accent-blue);
+    margin-right: 12px;
+    border-radius: 4px;
+}
+
+.logo-area h2 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-menu {
+    padding: 20px 0;
+}
+
+.nav-item {
+    display: block;
+    padding: 12px 24px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: #252525;
+    color: var(--text-primary);
+    border-left-color: var(--accent-blue);
+}
+
+/* =========================================
+   MIDDLE PART: Main Content
+   ========================================= */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    /* Light bg for content area as per request image inspiration usually implies contrast, but let's stick to dark mode for premium feel or match the provided image? 
+    The provided image is light mode. Let's Switch to Light Mode to match the image provided more closely but keep it clean. */
+    background-color: #f0f0f0;
+    color: #151515;
+    overflow-y: auto;
+}
+
+/* Switching variables for Light Mode based on image */
+body {
+    --bg-dark: #212427;
+    /* Dark sidebar */
+    --bg-content: #f5f5f5;
+    --card-bg: #ffffff;
+    --text-main: #151515;
+    --text-sub: #6a6e73;
+    --border-light: #d2d2d2;
+}
+
+.sidebar-left {
+    background-color: var(--bg-dark);
+    border-right: none;
+}
+
+.nav-item {
+    color: #d1d1d1;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+.top-header {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* The Grid */
+.content-grid {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    grid-template-rows: repeat(2, auto);
+    /* 2 rows, sizing to content */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid transparent;
+    /* Potential accent line */
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Specific Card Styles matching the image roughly */
+.details-card {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.status-card {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.inventory-card {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.utilization-card {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+/* Text Utils */
+.detail-row {
+    margin-bottom: 12px;
+}
+
+.detail-row .label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.detail-row .value {
+    display: block;
+    font-size: 14px;
+    color: var(--text-sub);
+    word-break: break-all;
+}
+
+.link-action {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: auto;
+    display: block;
+    /* changed to block to insure border spans full width if inside flex col */
+    border-top: 1px solid #e5e5e5;
+    /* Lighter border to appear thinner/less heavy */
+    padding-top: 10px;
+}
+
+/* Status Grid Refinments */
+.status-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.status-item {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-green);
+    font-weight: 500;
+}
+
+.status-icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent-green);
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.status-item.warning {
+    color: #151515;
+}
+
+.status-icon-circle.warning {
+    background-color: var(--accent-warning);
+    color: white;
+    font-weight: bold;
+}
+
+.status-item .sub-text {
+    font-weight: 400;
+    color: var(--text-sub);
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Notifications Section */
+.notifications-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.notif-badges {
+    display: flex;
+    gap: 8px;
+}
+
+.badge {
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #ddd;
+}
+
+.badge.red {
+    background: white;
+    color: var(--accent-danger);
+    border-color: var(--accent-danger);
+    border-radius: 12px;
+    /* Pill shape */
+    padding: 2px 10px;
+    /* Increased width via padding */
+    min-width: 30px;
+    /* Ensure it looks wide */
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge.yellow {
+    background: white;
+    color: var(--accent-warning);
+    border-color: var(--accent-warning);
+    border-radius: 12px;
+    padding: 2px 10px;
+    min-width: 30px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge.blue {
+    background: white;
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+    border-radius: 12px;
+    padding: 2px 10px;
+    min-width: 30px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-all-notif {
+    margin-left: auto;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* Inventory Badges */
+.inventory-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #0066cc;
+    padding: 5px 0;
+}
+
+.inventory-item span:first-child {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 2px;
+}
+
+.badges-row {
+    display: flex;
+    gap: 10px;
+}
+
+.warning-badge,
+.error-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.warning-badge {
+    color: var(--accent-warning);
+}
+
+.error-badge {
+    color: var(--accent-danger);
+}
+
+/* Utilization Refinements */
+.util-row {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.util-row:last-child {
+    border-bottom: none;
+}
+
+.util-text-side {
+    width: 40%;
+}
+
+.util-text-side h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.util-stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.util-value {
+    font-size: 20px;
+    color: #0066cc;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.util-avail {
+    font-size: 12px;
+    color: var(--text-sub);
+}
+
+.util-viz-side {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.util-graph-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 10px;
+    color: #999;
+    margin-bottom: 2px;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.util-graph {
+    width: 100%;
+    height: 40px;
+    background: #f2f2f2;
+    border: 1px dashed #ccc;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.graph-bar {
+    height: 100%;
+    background-color: #d1ecf1;
+    border-top: 2px solid #0066cc;
+    opacity: 0.6;
+}
+
+.util-total {
+    font-size: 12px;
+    color: var(--text-sub);
+    text-align: right;
+}
+
+/* =========================================
+   RIGHT PART: Events
+   ========================================= */
+.sidebar-right {
+    width: var(--right-panel-width);
+    background-color: #ffffff;
+    /* Explicitly White */
+    border-left: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 20px 10px;
+    /* Less padding left for bullets */
+    flex-shrink: 0;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.panel-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+    /* Bold */
+    color: #000000;
+    /* Black */
+}
+
+.filter-link {
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+.events-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.event-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    /* Tighter gap */
+    margin-bottom: 15px;
+    /* More space between items */
+    padding-bottom: 0px;
+    border-bottom: none;
+    /* Removed border as per image usually */
+    font-size: 12px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.arrow-icon {
+    color: #999;
+    font-size: 18px;
+    /* Larger arrow */
+    line-height: 0.8;
+    /* Align with top text */
+    margin-top: 1px;
+}
+
+.event-item .time {
+    color: #72767b;
+    min-width: 35px;
+    font-size: 12px;
+}
+
+.event-item .badge {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 10px;
+    color: white;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.badge.warning-icon {
+    background-color: #f0ab00;
+    /* Amber */
+    color: white;
+}
+
+.badge.info-icon {
+    background-color: #2b9af3;
+    /* Blue */
+    color: white;
+}
+
+.event-item .text {
+    color: #151515;
+    word-break: break-word;
+    /* Wrap long text */
+}
+
+.view-all {
+    margin-top: 10px;
+    padding-left: 10px;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        /* Stack vertically on smaller screens */
+    }
+
+    .details-card {
+        grid-area: auto;
+    }
+
+    .status-card {
+        grid-area: auto;
+    }
+
+    .inventory-card {
+        grid-area: auto;
+    }
+
+    .utilization-card {
+        grid-area: auto;
+    }
+}
