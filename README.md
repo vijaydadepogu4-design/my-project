@@ -4,7 +4,7 @@
 
 A modern and responsive **Cluster Dashboard UI** built using **HTML5**, **CSS3**, and **JavaScript**. Inspired by enterprise infrastructure dashboards, the application provides a clean interface for monitoring cluster health, resource utilization, system status, and event activity.
 
-**🌐 Live Demo:** https://vijay4design.github.io/my-project/
+**🌐 Live Demo:** https://vijay4design.github.io/cluster-dashboard-ui/
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
